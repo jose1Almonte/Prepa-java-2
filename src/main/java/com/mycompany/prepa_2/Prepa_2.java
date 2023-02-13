@@ -27,7 +27,7 @@ public class Prepa_2 {
 //    Este es un semaforo, lo escribimos solo para explicar otra forma de añadirlos
     public static Semaphore semaforoMutex = new Semaphore(3);
     
-    public static int numero_ropas_lavadas = 0;
+    public static volatile int numero_ropas_lavadas = 0;
     
     
 //    Denotamos que esta es el "public static principal", por decirlo de alguna forma

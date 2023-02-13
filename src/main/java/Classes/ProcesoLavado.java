@@ -36,11 +36,15 @@ public class ProcesoLavado extends Thread{
             while(keep){
                 this.semaforoMain.acquire();
 //                Prepa_2.semaforoMutex.acquire();
-                System.out.println( "Lo lava: "+ this.nameUser +" con un lavado time: " + this.semaforoMain);
                 Prepa_2.numero_ropas_lavadas++;
+                System.out.println( "Lo lava: "+ this.nameUser + ". número lavado: " + Prepa_2.numero_ropas_lavadas + " con un lavado time: " + this.semaforoMain);
                 Thread.sleep(1000);
                 
-                System.out.println("Numero de ropas lavadas: " + Prepa_2.numero_ropas_lavadas);
+//                if(this.semaforoMain.getQueueLength() == 0){
+//                    keep = false;
+//                }
+                
+//                System.out.println("Numero de ropas lavadas: " + Prepa_2.numero_ropas_lavadas);
             }
             
 //        for (int i = 0; i <= 5; i++){
